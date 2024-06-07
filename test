@@ -1,332 +1,108 @@
-
-<app-navbar></app-navbar>
-<div class="auth">
-    <div class="container applyInfo">
-        <div class="apply_section">
-            <div class="contents">
-                <h1>Apply Here</h1>
-                <p>
-                    Join our diverse and inclusive community of learners ( Apply
-                    Here As A Applicant)
-                </p>
-            </div>
-
-            <button class="btn">Apply Now &rarr;</button>
+<div class="login">
+    <img class="login__logo" src="/assets/img/Logo.png" alt="">
+    <h1><strong>Log in</strong> </h1>
+    <form (ngSubmit)="login()" class="login__form">
+        <div class="form-group">
+            <label for="username" class="login__label">Username/ID</label>
+            <input type="text" class="form-control login__input" id="username" placeholder="@username/id"
+                [(ngModel)]="user.username" name="username" required />
         </div>
-        <div class="tabArea">
-            <div class="tab">
-                <button class="tablinks active">How to Apply</button>
-                <button class="tablinks">Protect Your Account</button>
-                <button class="tablinks">Login Problems</button>
-                <button class="tablinks">Forgotten Password</button>
-                <button class="tablinks">How to Log Out</button>
-            </div>
-
-            <div class="tabcontent">
-                <ul>
-                    <li>
-                        <img src="/assets/img/auth_img/done_icon.png" alt="" />
-                        Go to the IUMS website and click on the "Start Your
-                        Application" button on the admissions page.
-                    </li>
-                    <li>
-                        <img src="/assets/img/auth_img/done_icon.png" alt="" />
-                        Register an account on the secure online application
-                        portal to begin your application.
-                    </li>
-                    <li>
-                        <img src="/assets/img/auth_img/done_icon.png" alt="" />
-                        Complete sections including personal information and
-                        your personal statement or essay.
-                    </li>
-                    <li>
-                        <img src="/assets/img/auth_img/done_icon.png" alt="" />
-                        Submit academic transcripts and other relevant
-                        materials. The portal supports various file formats.
-                    </li>
-                    <li>
-                        <img src="/assets/img/auth_img/done_icon.png" alt="" />
-                        Before submission, review all the entered information
-                        and make any necessary edits.
-                    </li>
-                </ul>
-            </div>
+        <div class="form-group">
+            <label for="password" class="login__label">Password</label>
+            <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control login__input" id="password"
+                placeholder="********" [(ngModel)]="user.password" name="password" required />
+            <app-error [errors]="errors"></app-error>
         </div>
+
+
+        
+
+    <div class="formOption">
+        <div class="form-check my-3">
+                <input class="form-check-input" type="checkbox" (click)="onChangeShowPassword()" id="flexCheckDefault" />
+                <label class="form-check-label ml-3" for="flexCheckDefault">
+                    Show password
+                </label>
+            </div>
+            <div class="">
+                <a routerLink="/send-email" class="mt-4 link">Forget Password?</a>
+            </div>
+            
     </div>
+        
+        
 
-    <div class="auth__container">
-        <div class="auth__left">
-            <h2 class="auth__title">
-                Welcome To
-                <br />
-                <span>IUMS</span>
-            </h2>
-            <p class="auth__text">
-                <!-- Welcome to IUMS - the Integrated University Management System, where academic excellence
-                meets global innovation. At IUMS, we pride ourselves o n fostering an environment where students are
-                encouraged to explore, innovate, and excel in their chosen fields of study. Our faculty comprises
-                leading experts and scholars dedicated to providing world-class education and mentorship to our diverse
-                student body. -->
-                Welcome to IUMS - the International University of Management and
-                Sciences, where academic excellence meets global innovation. At
-                IUMS, we pride ourselves on fostering an environment where
-                students are encouraged to explore, innovate, and excel in their
-                chosen fields of study. Our faculty comprises leading experts
-                and scholars dedicated to providing world-class education and
-                mentorship to our diverse student body.
-            </p>
-
-            <div class="auth__joinUs">
-                <img src="/assets/img/auth_img/cap.png" alt="" />
-                <p>Join us in the pursuit of excellence and innovation.</p>
+        
+        <div class="">
+                <button type="submit" class="btn login__btn">Login</button>
             </div>
-        </div>
-        <div class="auth__right">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
+    </form>
 </div>
 
-@import "../../styles/abstracts/_mixins.scss";
-p{
-    margin: 0 !important;
-}
-.auth {
-    min-height: 100vh;
-    background-color: #fff;
+
+
+
+
+.login {
+    max-width: 100%;
+    height: 100%;
+    margin: 0px 15px;
+    font-size: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 3em;
-    &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        width: 85%;
-        height: 80vh;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        @include break(medium) {
-            grid-template-columns: 1fr;
-        }
-        @include break(small) {
-            width: 100%;
-        }
+    padding:0 1.5em ;
+    h1{
+        margin-top: 0.6em;
     }
-
-    &__left {
-        background: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 0.6),
-                rgba(0, 0, 0, 0.6)
-            ),
-            url("/assets/img/login_page.png");
-        background-size: cover;
-        border-top-left-radius: 16px;
-        border-bottom-left-radius: 16px;
-        width: 55%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
-        padding: 0 4em;
-        @include break(medium) {
-            display: none;
-        }
+    &__logo {
+        width: 100px;
+        height: 100px;
     }
-
-    &__title {
-        font-size: 24px;
-        font-weight: bold;
+    &__form {
+        width: 100%;
+    }
+    &__btn {
+        background-color: #024799 !important;
         color: #fff;
-    }
-    &__title span::after {
-        content: "";
+        font-size: 1.7rem;
         display: block;
-        width: 37px;
-        height: 5px;
-        background-color: #ff0;
-        margin-top: 2px;
+        width: 100%;
+        text-transform: uppercase;
+        border-radius: 16px;
     }
-    &__text {
-        font-size: 12px;
-        color: #fff;
-        letter-spacing: 2px;
-        line-height: 20px;
+
+    &__input {
+        font-size: 1.8rem;
+        border: 1px solid #000;
+        border-radius: 8px;
+        &:focus {
+            box-shadow: none;
+            border: 1px solid #000;
+        }
     }
-    &__joinUs {
+    &__label {
+        font-size: 2rem;
+    }
+
+    .form-check {
         display: flex;
-        gap: 10px;
         align-items: center;
-        img {
-            width: 30px;
-        }
-        p {
-            color: white;
-            margin: 0px !important;
-            font-size: 12px;
-        }
+    }
+    .form-check-label {
+        font-size: 16px;
     }
 
-    &__right {
-        width: 40%;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
+    .link {
+        font-size: 18px;
     }
 }
 
-// .applyInfo {
-//     width: 100%;
-//     display: flex;
-//     gap: 1em;
 
-//     .apply_section {
-//         padding: 3em 1em;
-//         width: 20%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         background: linear-gradient(
-//             180deg,
-//             rgba(205, 227, 255, 1) 0%,
-//             rgba(255, 255, 255, 1) 100%
-//         );
-//         border-radius: 10px;
-//         box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
-//         gap: 2em;
-//         .btn {
-//             // border: none;
-//             display: block;
-//             padding: 1em;
-//             font-size: 1.1em;
-//             border-radius: 10px;
-//             background: linear-gradient(
-//                 180deg,
-//                 rgba(0, 181, 113, 1) 0%,
-//                 rgba(0, 51, 32, 1) 100%
-//             );
-//             color: white;
-//         }
-//     }
-
-//     .tabArea {
-//         width: 70%;
-//         background-color: red;
-//     }
-// }
-
-.container{
-    width: 85%;
-}
-.applyInfo {
-    margin: 2em auto 4em auto;
-    padding: 0 1em;
+.formOption{
+    padding-bottom: 1em;
     display: flex;
     justify-content: space-between;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-
-.apply_section {
-    padding: 2em;
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg,
-            rgba(205, 227, 255, 1) 0%,
-            rgba(255, 255, 255, 1) 100%);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
-    gap: 2em;
-}
-
-.apply_section .contents {
-    width: 60%;
-}
-.apply_section .contents p {
-    font-size: 12px;
-}
-
-.btn {
-    width: 50%;
-    display: block;
-    padding: 1em;
-    font-size: 1.1em;
-    background: linear-gradient(180deg,
-    rgba(0, 181, 113, 1) 0%,
-    rgba(0, 51, 32, 1) 100%);
-    color: white;
-border-radius: 10px;
-border: none;
-    }
-
-
-.tabArea {
-    width: 62%;
-}
-
-.tab {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 4px solid #00469E;
-}
-
-.tablinks {
-    padding: 1em 1.5em;
-    font-size: 1.1em;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.tablinks.active {
-    background-color: #00469E;
-    border-radius: 10px 10px 0 0;
-    color: white;
-    font-weight: 800;
-}
-
-.tabcontent {
-    padding: 2em;
-    background: linear-gradient(180deg,
-            rgba(205, 227, 255, 1) 0%,
-            rgba(255, 255, 255, 1) 100%);
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
-
-}
-.tabcontent ul{
-    list-style: none;
-}
-.tabcontent ul li {
-    padding: 0.5em 0;
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.tabcontent ul li img {
-    width: 20px;
-    margin-right: 0.3em;
-}
-@media screen and (max-width: 1200px) {
-    
-    .applyInfo{
-        display: none;
-    }
-    .auth__left{
-        display: none;
-    }
-    .auth__right{
-        width: 65%;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .auth__right{
-        width: 85%;
-    }
-  }
-
 
