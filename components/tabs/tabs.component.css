@@ -1,0 +1,22 @@
+
+  .tab-headers {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-headers li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .tab-headers li.active {
+    background-color: #01448d;
+    color: #fff;
+  }
+  
+  .tab-content {
+    padding: 10px;
+  }
+  
