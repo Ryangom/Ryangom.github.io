@@ -1,50 +1,21 @@
-<app-tabs>
-  <app-tab title="How to Apply">
-    <h1>sdfsdf</h1>
-  </app-tab>
-  <app-tab title="Protect Your Account">
-    <h1>sdfsdf</h1>
-  </app-tab>
-  <app-tab title="Login Problem">Content of Tab 3</app-tab>
-  <app-tab title="Forgotten Password">Content of Tab 3</app-tab>
-  <app-tab title="How to Log Out">Content of Tab 3</app-tab>
-</app-tabs>
+Subject: Request for Salary Account Setup
 
+Dear [HR Manager's Name],
 
+I hope this message finds you well. I am writing to formally request the setup of a salary account as per the instruction provided by you.
 
+As a recent addition to the company, I do not currently have a designated salary account for the disbursement of my monthly pay. I understand the importance of having a dedicated account for this purpose to ensure smooth and timely processing of my salary.
 
+I kindly request your assistance in guiding me through the necessary steps and procedures to establish my salary account with the company. Any specific forms or documents that need to be filled out or submitted should be promptly provided to me so that I can complete the process in a timely manner.
 
-  .tab-headers {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    border-bottom: 3px solid #2f009c;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .tab-headers li {
-    padding: 10px;
-    cursor: pointer;
-    padding: 0.5em 1em;
-    }
-    
-  .tab-headers li.active {
-    background-color: #01448d;
-    color: #fff;
-    border-radius: 8px 8px 0 0;
-    font-weight: 500;
-  }
-  
-  
+If there are any specific requirements or preferences that the company has regarding the choice of bank or account type for salary disbursement, please do let me know so that I can proceed accordingly.
 
+I greatly appreciate your attention to this matter and look forward to your guidance on setting up my salary account at the earliest convenience. Should you require any further information or clarification from my end, please feel free to reach out to me.
 
-.tab-content{
-    padding: 0.5em 2em;
-    margin: 0;
-    background: linear-gradient(180deg, 
-        rgba(205, 227, 255, 1) 0%, 
-        rgba(255,255,255,1) 100%);
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
-}
+Thank you for your assistance and support in this process.
 
+Warm regards,
+
+[Your Full Name]
+[Your Employee ID]
+[Your Department]
