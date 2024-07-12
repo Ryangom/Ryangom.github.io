@@ -1,21 +1,118 @@
-Subject: Request for Salary Account Setup
+// playground requires you to assign document definition to a variable called dd
 
-Dear [HR Manager's Name],
+var dd = {
+    pageSize: 'A2',
 
-I hope this message finds you well. I am writing to formally request the setup of a salary account as per the instruction provided by you.
-
-As a recent addition to the company, I do not currently have a designated salary account for the disbursement of my monthly pay. I understand the importance of having a dedicated account for this purpose to ensure smooth and timely processing of my salary.
-
-I kindly request your assistance in guiding me through the necessary steps and procedures to establish my salary account with the company. Any specific forms or documents that need to be filled out or submitted should be promptly provided to me so that I can complete the process in a timely manner.
-
-If there are any specific requirements or preferences that the company has regarding the choice of bank or account type for salary disbursement, please do let me know so that I can proceed accordingly.
-
-I greatly appreciate your attention to this matter and look forward to your guidance on setting up my salary account at the earliest convenience. Should you require any further information or clarification from my end, please feel free to reach out to me.
-
-Thank you for your assistance and support in this process.
-
-Warm regards,
-
-[Your Full Name]
-[Your Employee ID]
-[Your Department]
+  // by default we use portrait, you can change it to landscape if you wish
+  pageOrientation: 'landscape',
+	content: [
+	    
+	    
+		{
+			style: 'tableExample',
+			table: {
+				body: [
+				    // head
+					[
+					    {text:'ID',rowSpan:3,margin:[0,20,0,0]},
+					    {text:'Name Of Student',rowSpan:3,margin:[0,20,0,0]},
+					    {text:'Course Code:',colSpan:5,alignment:"center",bold:true},
+					    {},
+					    {},
+					    {},
+					    {},
+					    {text:'Course Code:',colSpan:5,alignment:"center",bold:true},
+					    {},
+					    {},
+					    {},
+					    {},
+					    {text:'Course Code:',colSpan:5,alignment:"center",bold:true},
+					    {},
+					    {},
+					    {},
+					    {},
+					    {text:'ECH',rowSpan:3,alignment:"center",bold:true},
+					    {text:'Semister GPA',rowSpan:3,alignment:"center",bold:true},
+					    {text:'Remarks',rowSpan:3,alignment:"center",bold:true},
+					    
+					],
+				// 	row
+				// 	sub head
+					[
+					    {text:''},
+					    {text:''},
+					    {text:'Before Exam',rowSpan:2},
+					    {text:'Final Exam',rowSpan:2},
+					    {text:'Total Marks',rowSpan:2},
+					    {text:'LG',rowSpan:2},
+					    {text:'GP',rowSpan:2},
+					    {text:'Before Exam',rowSpan:2},
+					    {text:'Final Exam',rowSpan:2},
+					    {text:'Total Marks',rowSpan:2},
+					    {text:'LG',rowSpan:2},
+					    {text:'GP',rowSpan:2},
+					    {text:'Before Exam',rowSpan:2},
+					    {text:'Final Exam',rowSpan:2},
+					    {text:'Total Marks',rowSpan:2},
+					    {text:'LG',rowSpan:2},
+					    {text:'GP',rowSpan:2},
+					    {},
+					    {},
+					    {},
+					    
+					],
+					[
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {text:''},
+					    {},
+					    {},
+					    {},
+					    
+					],
+					[
+					    {text:'1'},
+					    {text:'Jonas Ryan Gomes'},
+					    {text:'10'},
+					    {text:'30'},
+					    {text:'6'},
+					    {text:'9'},
+					    {text:'89'},
+					    {text:'23'},
+					    {text:'1'},
+					    {text:'56'},
+					    {text:'13'},
+					    {text:'19'},
+					    {text:'98'},
+					    {text:'12'},
+					    {text:'23'},
+					    {text:'87'},
+					    {text:'34'},
+					    {},
+					    {},
+					    {},
+					    
+					],
+					
+					
+					
+				]
+			}
+		},
+		]
+	
+}
